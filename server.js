@@ -4,11 +4,11 @@ const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 3000;
 
-// const User = require("./userModel.js");
+const db = require("../models");
 //Change this code above
 const app = express();
 
-//search                   
+//search what this part does                   
 app.use(logger("dev"));
 
 app.use(express.urlencoded({ extended: true }));
