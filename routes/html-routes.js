@@ -3,8 +3,6 @@
 const express = require("express");
 const path = require("path");
 
-const appo = express()
-
 module.exports = function(app) {
     app.get("/", (req,res) => {
         res.sendFile(path.join(_dirname, '../public/index.html'));
