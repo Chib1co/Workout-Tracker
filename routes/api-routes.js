@@ -4,9 +4,11 @@
 const Workout = require("../models/workout.js");
 const mongoose = require("mongoose");
 const express = require("express");
-const app = express();
 
-app.post("/api/workouts", ({body}, res)=> {
+// const app = express();
+const router = express.Router();
+
+router.post("/api/workouts", ({body}, res)=> {
     Workout.create(body)
     .then(dbWorkout => {
         res.json(dbWorkout);

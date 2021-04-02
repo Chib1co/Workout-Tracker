@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 8080;
 
-const db = require("./models/workout");
+const Workout = require("./models/workout");
 //Change this code above
 const app = express();
 
@@ -16,7 +16,13 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+
+
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userdb", { useNewUrlParser: true });
+
+app.use(require("./routes/api-routes.js"));
+app.use(require("./routes/html-routes.js"));
+
 
 app.post("/submit", ({ body }, res) => {
   User.create(body)
