@@ -4,6 +4,7 @@
   "description": "Week17-Homework",
   "main": "index.js",
   "scripts": {
+    "seed": "node seeders/seed.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
