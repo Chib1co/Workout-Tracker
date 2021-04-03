@@ -50,6 +50,20 @@ router.put("/api/workouts/:id", (req, res) => {
 });
 router.get("/api/workouts/range", (req, res) => {
     // get all the workouts
+    Workout.aggregate([
+        {
+            $addFields: {
+                totalDuration: { $sum: "$duration"}
+            }
+        }
+    ])
+    .limit(7)
+    .then(dbWorkout => {
+        res.json(dbWorkout);
+    })
+    .catch(err => {
+        res.json(err)
+    })
     // for each workout -- include a 'totalDuration' field
 })
 
