@@ -71,6 +71,6 @@ Tomomi Inoue
 
 Project Link: [https://github.com/Chib1co/Workout-Tracker](https://github.com/Chib1co/Workout-Tracker)
 
-Deployed page: 
+Deployed page: [https://mighty-woodland-73486.herokuapp.com/?id=606925811ea8f78a92f25baa](https://mighty-woodland-73486.herokuapp.com/?id=606925811ea8f78a92f25baa)
 
 
